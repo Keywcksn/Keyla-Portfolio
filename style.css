@@ -1,0 +1,644 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #1B1B1B;
+    color: white;
+}
+
+nav{
+    height: 60px;
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #1B1B1B;
+    position: fixed;
+    top: 0;
+    left: 50px;
+    right: 90px;
+    z-index: 1000;
+    max-width: 1800px;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 20px 30px;
+}
+
+nav ul li a{
+    color: #EB56FF;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    border-radius: 5px;
+    background: #EB56FF;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.2s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+.logo{
+    width: 53px;
+    height: 41px;
+}
+
+#header{
+    width: 100%;
+    height: 100vh;
+}
+
+.container{
+    padding: 10px 0%;
+}
+
+.header-text{
+    padding-left: 5%;
+    margin-top: 13%;
+    font-size: 30px;
+    color: #A5A5A5;
+}
+
+.header-text h1{
+    font-size: 80px;
+    margin-top: 3px;
+    color:  #EB56FF;
+}
+
+.button{
+    margin-top: 30px;
+    position: relative;
+    color: #ECECEC;;
+    width: 286px;
+    height: 49px;
+    font-size: 16px;
+    border-radius: 10px;
+    /* border: 2px solid #EB56FF; */
+    outline: 2px solid #EB56FF;
+    background: #3D3D3D;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .25s;
+    cursor: pointer;
+}
+
+.button:hover{
+    animation: shake .25s;
+    background-color: #EB56FF;
+    color: #3D3D3D;
+}
+
+@keyframes shake{
+    10%{
+        transform: rotate(1deg);
+    }
+    20%{
+        transform: rotate(-1deg);
+    }
+    30%{
+        transform: rotate(1deg);
+    }
+    40%{
+        transform: rotate(-1deg);
+    }
+}
+
+.mockup{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    z-index: -1000;
+}
+
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3D3D3D;
+  }
+
+/* ---------------------------------------- */
+/* ABOUT ME */
+
+#me{
+    padding-top: 160px;
+    color: #A5A5A5;
+    justify-content: center;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+}
+
+/* column 1 */
+.about1{
+    flex-basis: 30%;
+}
+
+.about1 img{
+    width: 332px;
+    height: 414px;
+}
+
+/* column 2 */
+.about2{
+    flex-basis: 55%;
+}
+
+.title{
+    color: #EB56FF;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.text{
+    margin-top: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+    color: #A5A5A5;
+}
+
+
+/* ----------------- SKILLS --------------- */
+#skills{
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.stitle{
+    color: #EB56FF;
+    font-size: 45px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.cardcontainer{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.card{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px 20px;
+    /* overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    z-index: 10;
+}
+
+.card .imgrow{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.card .imgrow img{
+    max-width: 100%;
+}
+
+/* -------------- PORTFOLIO -------------- */
+
+#porto{
+    padding-top: 50px;
+}
+
+.leftside{
+    flex-basis: 40%;
+    padding-top: 50px;
+}
+
+.rightside{
+    flex-basis: 40%;
+    padding-top: 50px;
+}
+
+.proj-title{
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 33px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.kind{
+    padding-top: 1px;
+    color: #A5A5A5;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.portoimg{
+    overflow: hidden;
+    width: 566px;
+    height: 400px;
+    border-radius: 20px;
+}
+
+.portoimg img{
+    width: 566px;
+    height: 400px;
+    cursor: pointer;
+    transition: transform 900ms ease-in-out;
+}
+
+.portoimg img:hover{
+    transform: scale(1.1);
+}
+
+/* ----------- CONTACT ME ------------ */
+#contact{
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.cleftside{
+    flex-basis: 40%;
+    padding-top: 50px;
+}
+
+.crightside{
+    flex-basis: 40%;
+    padding-top: 50px;
+}
+
+.cleftside p{
+    margin-top: 10px;
+    justify-content: left;
+}
+
+.cleftside p i{
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.socials{
+    margin-top: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+}
+
+.icons{
+    padding-top: 20px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.icon{
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 50%;
+    outline: 2px solid #FFFFFF;
+    transition-property: outline-offset, outline-color, background-color;
+    transition-duration: .5ms;
+}
+
+.icon:hover{
+    outline-offset: 4px;
+    animation: shake .5s;
+}
+
+.icon:hover i{
+    animation: shakes .5s;
+}
+
+.icon-ig:hover{
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AE9 90%);
+    outline-color: #522E92;
+}
+
+.icon-linkedin:hover{
+    background-color: #0072B1;
+    outline-color: #0072B1;
+}
+
+@keyframes shakes{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+
+.crightside form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #3D3D3D;
+    padding: 15px;
+    margin: 10px 0;
+    color: #FFFFFF;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+/* FOOTER */
+.copyright{
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    background: #3D3D3D;
+    font-weight: 300;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+/* ---------- CSS for Mobile ------------- */
+nav .fa-solid{
+    display: none;
+}
+
+.mob{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    .logo{
+        margin-top: 10px;
+        width: 55px;
+        height: 31px;
+        padding-left: 15px;
+    }
+
+    nav{
+        /* width: 87%; */
+        max-width: 500px;
+        left: 30px;
+        right: 10px;
+        color: #1B1B1B;
+        padding: 10px 0;
+        left: 0;
+    }
+
+    nav .fa-solid{
+        margin-top: 10px;
+        display: block;
+        font-size: 25px;
+        z-index: 2;
+    }
+
+    nav ul{
+        background: #EB56FF;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+
+    nav ul li a{
+        color: #1B1B1B;
+        margin-left: 0;
+    }
+
+    #header{
+        padding: 10px 0;
+    }
+    .mockup{
+        visibility: hidden;
+    }
+
+    .header-text{
+        margin-top: 50%;
+        font-size: 20px;
+    }
+
+    .header-text h1{
+        font-size: 50px;
+    }
+
+    .button{
+        margin-top: 30px;
+        position: relative;
+        color: #ECECEC;;
+        width: 192px;
+        height: 32.895px;
+        font-size: 13px;
+        border-radius: 8px;
+        outline: 2px solid #EB56FF;
+        background: #3D3D3D;
+        transition-property: outline-offset, outline-color, background-color;
+        transition-duration: .25s;
+        cursor: pointer;
+    }
+
+    /* Me */
+    #me{
+        padding-top: 90px;
+    }
+
+    .title{
+        font-size: 20px;
+    }
+
+    /* .text{
+        font-size: 14px;
+    } */
+
+    .about1 img{
+        width: 227px;
+        height: 283px;
+    }
+
+    .about2 .text{
+        width: 300px;
+    }
+
+    /* Skills */
+    .stitle{
+        font-size: 22px;
+        margin-bottom: 0;
+    }
+
+    .cardcontainer{
+        width: 100%;
+    }
+
+    .card{
+        height: 120px;
+        width: 120px;
+    }
+    
+    .card .imgrow{
+        margin-top: 20px;
+        column-gap: 5px;
+        padding-bottom: 25px;
+    }
+
+    /* Porto */
+    .mob{
+        display: block;
+    }
+
+    .leftside{
+        display: none;
+    }
+
+    .rightside{
+        display: none;
+    }
+
+    .proj-title{
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-top: 40px;
+        margin-left: 8px;
+        margin-right: 12px;
+    }
+
+    .kind{
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 8px;
+        margin-right: 12px;
+    }
+
+    .text{
+        font-size: 14px;
+        width: 95%;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: 12px;
+    }
+
+    .portoimg{
+        height: 280px;
+        width: 395px;
+        overflow: visible;
+    }
+
+    .portoimg img{
+        height: 270px;
+        width: auto;
+        border-radius: 15px;
+        margin-top: 30px;
+        margin-left: 8px;
+        margin-right: 12px;
+    }
+
+    /* contact */
+    .cleftside, .crightside{
+        flex-basis: 80% ;
+        padding-top: 20px;
+        width: 95%;
+    }
+
+    .contactform{
+        width: 340px;
+        overflow: hidden;
+    }
+}
+
+#msg{
+    color: #EB56FF;
+    margin-top: 5px;
+    padding-top: 5px;
+    display: block;
+}
+
