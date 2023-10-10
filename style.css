@@ -19,16 +19,13 @@ body{
 
 nav{
     height: 60px;
-    width: 97%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #1B1B1B;
     position: fixed;
-    top: 0;
-    left: 50px;
-    right: 90px;
     z-index: 1000;
     max-width: 1800px;
 }
@@ -63,8 +60,9 @@ nav ul li a:hover::after{
 }
 
 .logo{
-    width: 53px;
+    width: 83px;
     height: 41px;
+    padding-left: 30px;
 }
 
 #header{
@@ -440,6 +438,127 @@ nav .fa-solid{
     display: none;
 }
 
+@media only screen and (max-width: 1000px){
+    .mockup{
+        visibility: hidden;
+    }
+    
+    .logo{
+        margin-top: 10px;
+        width: 55px;
+        height: 31px;
+        padding-left: 15px;
+    }
+
+    nav{
+        width: 100%;
+        color: #1B1B1B;
+    }
+
+    nav .fa-solid{
+        margin-top: 10px;
+        display: block;
+        font-size: 25px;
+        z-index: 2;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    nav ul{
+        background: #EB56FF;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 20px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 40px 15px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        padding-right: 20px;
+    }
+
+    nav ul li a{
+        color: #1B1B1B;
+        margin-left: 0;
+    }
+
+    .portoimg{
+        overflow: hidden;
+        width: 400px;
+        height: auto;
+        border-radius: 20px;
+    }
+    
+    .portoimg img{
+        width: 400px;
+        height: auto;
+        cursor: pointer;
+        transition: transform 900ms ease-in-out;
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .portoimg{
+        overflow: hidden;
+        width: 350px;
+        height: auto;
+        border-radius: 20px;
+        justify-items: center;
+        align-items: center;
+    }
+    
+    .portoimg img{
+        width: 350px;
+        height: auto;
+        transition: transform 900ms ease-in-out;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .proj-title{
+        font-size: 16px;
+        margin-bottom: 0;
+        margin-top: 40px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .kind{
+        font-size: 12px;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .text{
+        font-size: 14px;
+        width: 95%;
+        margin-top: 10px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .cleftside, .crightside{
+        flex-basis: 80% ;
+        width: 95%;
+    }
+
+    .contactform{
+        width: 500px;
+        overflow: hidden;
+    }
+}
+
 @media only screen and (max-width: 600px){
     .container{
         margin-left: 20px;
@@ -454,13 +573,8 @@ nav .fa-solid{
     }
 
     nav{
-        /* width: 87%; */
-        max-width: 500px;
-        left: 30px;
-        right: 10px;
+        width: 100%;
         color: #1B1B1B;
-        padding: 10px 0;
-        left: 0;
     }
 
     nav .fa-solid{
@@ -468,6 +582,8 @@ nav .fa-solid{
         display: block;
         font-size: 25px;
         z-index: 2;
+        padding-right: 15px;
+        padding-left: 15px;
     }
 
     nav ul{
@@ -477,21 +593,19 @@ nav .fa-solid{
         right: -200px;
         width: 200px;
         height: 100vh;
-        padding-top: 50px;
+        padding-top: 20px;
         z-index: 2;
         transition: right 0.5s;
     }
 
     nav ul li{
         display: block;
-        margin: 25px;
+        margin: 40px 15px;
     }
 
     nav ul .fa-solid{
         position: absolute;
-        top: 25px;
-        left: 25px;
-        cursor: pointer;
+        padding-right: 20px;
     }
 
     nav ul li a{
@@ -553,13 +667,21 @@ nav .fa-solid{
     }
 
     /* Skills */
+    #skills{
+        justify-items: center;
+        align-items: center;
+    }
+
     .stitle{
         font-size: 22px;
         margin-bottom: 0;
+        justify-items: center;
+        align-items: center;
     }
 
     .cardcontainer{
         width: 100%;
+        justify-items: center;
     }
 
     .card{
@@ -576,13 +698,12 @@ nav .fa-solid{
     /* Porto */
     .mob{
         display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
-    .leftside{
-        display: none;
-    }
-
-    .rightside{
+    .leftside, .rightside{
         display: none;
     }
 
@@ -591,7 +712,7 @@ nav .fa-solid{
         margin-bottom: 0;
         margin-top: 40px;
         margin-left: 8px;
-        margin-right: 12px;
+        margin-right: 8px;
     }
 
     .kind{
@@ -599,7 +720,7 @@ nav .fa-solid{
         margin-bottom: 0;
         margin-top: 0;
         margin-left: 8px;
-        margin-right: 12px;
+        margin-right: 8px;
     }
 
     .text{
@@ -607,13 +728,14 @@ nav .fa-solid{
         width: 95%;
         margin-top: 10px;
         margin-left: 8px;
-        margin-right: 12px;
+        margin-right: 8px;
     }
 
     .portoimg{
         height: 280px;
         width: 395px;
         overflow: visible;
+        justify-items: center;
     }
 
     .portoimg img{
@@ -622,7 +744,7 @@ nav .fa-solid{
         border-radius: 15px;
         margin-top: 30px;
         margin-left: 8px;
-        margin-right: 12px;
+        margin-right: 8px;
     }
 
     /* contact */
@@ -635,6 +757,13 @@ nav .fa-solid{
     .contactform{
         width: 340px;
         overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .copyright{
+        width: 100%;
+        background: #1B1B1B;
     }
 }
 
