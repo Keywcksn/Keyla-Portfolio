@@ -437,12 +437,8 @@ nav .fa-solid{
 .mob{
     display: none;
 }
-/* 
-@media only screen and (max-width: 1000px){
-    .mockup{
-        visibility: hidden;
-    }
-    
+
+@media only screen and (max-width: 1081px){
     .logo{
         margin-top: 10px;
         width: 55px;
@@ -450,121 +446,34 @@ nav .fa-solid{
         padding-left: 15px;
     }
 
-    nav{
-        width: 100%;
-        color: #1B1B1B;
-    }
-
-    nav .fa-solid{
-        margin-top: 10px;
-        display: block;
+    .header-text{
+        padding-left: 5%;
+        margin-top: 15%;
         font-size: 25px;
-        z-index: 2;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-
-    nav ul{
-        background: #EB56FF;
-        position: fixed;
-        top: 0;
-        right: -200px;
-        width: 200px;
-        height: 100vh;
-        padding-top: 20px;
-        z-index: 2;
-        transition: right 0.5s;
-    }
-
-    nav ul li{
-        display: block;
-        margin: 40px 15px;
-    }
-
-    nav ul .fa-solid{
-        position: absolute;
-        padding-right: 20px;
-    }
-
-    nav ul li a{
-        color: #1B1B1B;
-        margin-left: 0;
-    }
-
-    .portoimg{
-        overflow: hidden;
-        width: 400px;
-        height: auto;
-        border-radius: 20px;
     }
     
-    .portoimg img{
-        width: 400px;
-        height: auto;
-        cursor: pointer;
-        transition: transform 900ms ease-in-out;
-    }
-} */
-/* 
-@media only screen and (max-width: 850px){
-    .portoimg{
-        overflow: hidden;
-        width: 350px;
-        height: auto;
-        border-radius: 20px;
-        justify-items: center;
-        align-items: center;
-    }
-    
-    .portoimg img{
-        width: 350px;
-        height: auto;
-        transition: transform 900ms ease-in-out;
-        justify-items: center;
-        align-items: center;
+    .header-text h1{
+        font-size: 60px;
+        margin-top: 3px;
     }
 
-    .proj-title{
-        font-size: 16px;
-        margin-bottom: 0;
-        margin-top: 40px;
-        margin-left: 8px;
-        margin-right: 8px;
+    .button{
+        width: 192px;
+        height: 32.895px;
+        font-size: 13px;
     }
 
-    .kind{
-        font-size: 12px;
-        margin-bottom: 0;
-        margin-top: 0;
-        margin-left: 8px;
-        margin-right: 8px;
+    .leftside, .rightside{
+        padding-top: 35px;
     }
-
-    .text{
-        font-size: 14px;
-        width: 95%;
-        margin-top: 10px;
-        margin-left: 8px;
-        margin-right: 8px;
-    }
-
-    .cleftside, .crightside{
-        flex-basis: 80% ;
-        width: 95%;
-    }
-
-    .contactform{
-        width: 500px;
-        overflow: hidden;
-    }
-} */
+}
 
 @media only screen and (max-width: 600px){
     .container{
         margin-left: 20px;
         margin-right: 20px;
     }
-    
+
     .logo{
         margin-top: 10px;
         width: 55px;
@@ -583,7 +492,6 @@ nav .fa-solid{
         font-size: 25px;
         z-index: 2;
         padding-right: 15px;
-        padding-left: 15px;
     }
 
     nav ul{
@@ -593,29 +501,33 @@ nav .fa-solid{
         right: -200px;
         width: 200px;
         height: 100vh;
-        padding-top: 20px;
+        padding-top: 50px;
         z-index: 2;
         transition: right 0.5s;
     }
 
     nav ul li{
         display: block;
-        margin: 40px 15px;
+        margin: 20px;
     }
 
     nav ul .fa-solid{
         position: absolute;
-        padding-right: 20px;
+        top: 25px;
+        left: 20px;
+        cursor: pointer;
     }
 
     nav ul li a{
         color: #1B1B1B;
         margin-left: 0;
+        font-size: 14px;
     }
 
     #header{
         padding: 10px 0;
     }
+
     .mockup{
         visibility: hidden;
     }
@@ -646,16 +558,16 @@ nav .fa-solid{
 
     /* Me */
     #me{
-        padding-top: 90px;
+        padding-top: 50px;
     }
 
     .title{
         font-size: 20px;
     }
 
-    /* .text{
+    .text{
         font-size: 14px;
-    } */
+    }
 
     .about1 img{
         width: 227px;
@@ -663,20 +575,14 @@ nav .fa-solid{
     }
 
     .about2 .text{
-        width: 300px;
+        width: 350px;
+        margin-bottom: 5px;
     }
 
     /* Skills */
-    #skills{
-        justify-items: center;
-        align-items: center;
-    }
-
     .stitle{
         font-size: 22px;
         margin-bottom: 0;
-        justify-items: center;
-        align-items: center;
     }
 
     .cardcontainer{
@@ -687,6 +593,7 @@ nav .fa-solid{
     .card{
         height: 120px;
         width: 120px;
+        margin: 10px 10px;
     }
     
     .card .imgrow{
@@ -698,12 +605,13 @@ nav .fa-solid{
     /* Porto */
     .mob{
         display: block;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
     }
 
-    .leftside, .rightside{
+    .leftside{
+        display: none;
+    }
+
+    .rightside{
         display: none;
     }
 
@@ -748,15 +656,14 @@ nav .fa-solid{
     }
 
     /* contact */
-    .cleftside, .crightside{
-        flex-basis: 80% ;
-        padding-top: 20px;
-        width: 95%;
+    .socials, .icons{
+        padding-left: 20px;
+
     }
 
-    .contactform{
-        width: 340px;
-        overflow: hidden;
+    .cleftside, .crightside{
+        flex-basis: 100% ;
+        padding-top: 20px;
     }
 }
 
@@ -766,4 +673,3 @@ nav .fa-solid{
     padding-top: 5px;
     display: block;
 }
-
