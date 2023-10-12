@@ -669,6 +669,10 @@ nav .fa-solid{
         flex-basis: 100% ;
         padding-top: 20px;
     }
+
+    form input, form textarea{
+        font-size: 14px;
+    }
 }
 
 #msg{
