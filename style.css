@@ -654,6 +654,10 @@ nav .fa-solid{
         margin-left: 8px;
         margin-right: 8px;
     }
+    
+     .portoimg img:hover{
+        transform: none;
+    }
 
     /* contact */
     .socials, .icons{
