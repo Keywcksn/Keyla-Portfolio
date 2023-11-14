@@ -24,12 +24,11 @@
     <div id="header">
         <div class="container">
             <div class="header-text">
-                <p>Hi, I'm a<p>
-                <h1>CREATIVE <br> UI/UX DESIGNER.</h1>
+                <p id="htext">Hi, I'm a<p>
+                <h1 id="htext2">FRONT-END DEVELOPER.</h1>
                 <button class="button" id="contactBTN">CONTACT ME</button>
-            </div>
-            <div class="mockup">
-                <img src="./assets/begin3.png">
+                <!-- <span class="textA f1">I'm a <br/></span>
+                <span class="textA f2">UI/UX Designer</span> -->
             </div>
         </div>
     </div>
@@ -37,7 +36,7 @@
     <!-- section 2 -->
     <div id="me">
         <div class="container">
-            <div class="row">
+            <div class="row-me" id="row-me">
                 <div class="about1">
                     <img src="./assets/fotopng.png" class="myphoto">
                 </div>
@@ -50,6 +49,9 @@
                     <!-- <a href="CV ATS - Keyla Azzahra.pdf" target="_blank" class="button2">VIEW CV </a> -->
                     <button class="button" id="viewCvBTN">VIEW CV</button>
                 </div>
+            </div>
+            <div class="parallax">
+                <img src="./assets/bg-04.png" id="bgdown">
             </div>
         </div>
     </div>
@@ -289,11 +291,11 @@
             <div class="row">
                 <div class="cleftside">
                     <p class="socials"><i class="fa-regular fa-envelope" style="color: #FFFFFF;"></i>keyla.azzahraforwork@gmail.com</p>
-                    <p class="socials"><i class="fa-regular fa-envelope" style="color: #FFFFFF;"></i>keyla.azzahra@binus.ac.id</p>
                     <p class="socials"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i>087883880346</p>
                     <div class="icons">
                         <a href="https://www.instagram.com/keylawicaksono/" class="icon icon-ig"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
                         <a href="https://www.linkedin.com/in/keyla-azzahra-b464a4222/" class="icon icon-linkedin"><i class="fa-brands fa-linkedin-in" style="color: #ffffff;"></i></a>
+                        <a href="https://github.com/Keywcksn" class="icon icon-github"><i class="fa-brands fa-github" style="color: #ffffff;"></i></a>
                     </div>
                 </div>
                 <div class="crightside">
@@ -317,9 +319,24 @@
     </div>
 
     <script src="app.js"></script>
-
     <script>
         var side = document.getElementById("sidemenu");
     </script>
+    
+    <script>
+        const text = document.querySelector(".f2");
+        const textload = () =>{
+            setTimeout(() => {
+                text.textContent = "UI/UX DESIGNER"
+            }, 0);
+
+            setTimeout(() => {
+                text.textContent = "FRONT-END DEV"
+            }, 4000);
+        }
+        textload();
+        setInterval(textload, 8000)
+    </script>
+
 </body>
 </html>
