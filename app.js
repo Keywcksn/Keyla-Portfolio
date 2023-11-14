@@ -41,3 +41,70 @@ form.addEventListener('submit', e => {
     })
     .catch(error => console.error('Error!', error.message))
 })
+
+
+let contactBTN = document.getElementById('contactBTN');
+
+let bgdown = document.getElementById('bgdown');
+
+window.addEventListener('scroll', () => {
+    let val = window.scrollY;
+
+    contactBTN.style.top = val * -1.5 + 'px';
+
+    // bgup.style.left = val * -1.5 + 'px';
+    // bg2.style.left = val * 1.5 + 'px';
+    // bg3.style.left = val * -1.5 + 'pax';
+    bgdown.style.top = val * -1 + 'px';
+});
+
+
+
+// animate skills
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+        else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.card');  //ganti nama class
+hiddenElements.forEach((el) => observer.observe(el));
+
+
+//animate
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+        else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements2 = document.querySelectorAll('.stitle, .title, .about1, .about2');  //ganti nama class
+hiddenElements2.forEach((el) => observer2.observe(el));
+
+
+const observer3 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show2');
+        }
+        else {
+            entry.target.classList.remove('show2');
+        }
+    });
+});
+
+const hiddenElements3 = document.querySelectorAll('.leftside, .rightside');  //ganti nama class
+hiddenElements3.forEach((el) => observer3.observe(el));
